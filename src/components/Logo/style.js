@@ -1,10 +1,8 @@
 import styled from "styled-components";
 
 const SCLogo = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0 12.25px;
-  width: max-content;
+  width: 1024px;
+  margin: 0 auto;
 
   img {
     width: 61.74px;
@@ -12,14 +10,11 @@ const SCLogo = styled.div`
   }
 
   p {
-    font-family: "Lexend", sans-serif;
+    font-family: "Barlow Semi Condensed", sans-serif;
     font-weight: 700;
     font-size: 36px;
     line-height: 45px;
-  }
-
-  strong {
-    color: #3f61d7;
+    color: rgb(229, 24, 20);
   }
 `;
 
