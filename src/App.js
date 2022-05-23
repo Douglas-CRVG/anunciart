@@ -14,7 +14,7 @@ export default function App() {
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/home" element={<Home />} />
             <Route path="/add" element={<Add />} />
-            <Route path="/player" element={<Player />} />
+            <Route path="/player/:idVideo" element={<Player />} />
           </Routes>
         </BrowserRouter>
       </TokenContextProvider>

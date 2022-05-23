@@ -1,35 +1,19 @@
 import { SCBox, SCLink } from "./style";
 
-export default function Box() {
+export default function Box({ data }) {
   return (
     <SCBox>
-      <SCLink to="/player">
-        <figure>
-          <img
-            src="https://t2.tudocdn.net/603659?w=1920&h=1080"
-            alt="Uma imagem impressionante"
-          />
-          <figcaption>Legenda para a imagem impressionante</figcaption>
-        </figure>
-      </SCLink>
-      <SCLink to="/player">
-        <figure>
-          <img
-            src="https://t2.tudocdn.net/603659?w=1920&h=1080"
-            alt="Uma imagem impressionante"
-          />
-          <figcaption>Lorem ipsum dolor sit amet, consectetur</figcaption>
-        </figure>
-      </SCLink>
-      <SCLink to="/player">
-        <figure>
-          <img
-            src="https://t2.tudocdn.net/603659?w=1920&h=1080"
-            alt="Uma imagem impressionante"
-          />
-          <figcaption>Legenda para a imagem impressionanteoooo</figcaption>
-        </figure>
-      </SCLink>
+      {data.map((iten) => (
+        <SCLink key={iten.id} to={`/player/${iten.link}`}>
+          <figure>
+            <img
+              src="https://t2.tudocdn.net/603659?w=1920&h=1080"
+              alt={iten.name}
+            />
+            <figcaption>{iten.name}</figcaption>
+          </figure>
+        </SCLink>
+      ))}
     </SCBox>
   );
 }

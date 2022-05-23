@@ -18,4 +18,8 @@ function create(body, token) {
   return axios.post(`${URL}/create`, body, createConfig(token));
 }
 
-export { postSignUp, postSignIn, create };
+function findAll() {
+  return axios.get(`${URL}/videos`);
+}
+
+export { postSignUp, postSignIn, create, findAll };
