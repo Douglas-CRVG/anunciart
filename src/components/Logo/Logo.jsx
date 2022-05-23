@@ -1,9 +1,9 @@
-import { SCLogo } from "./style";
+import { SCLink, SCLogo } from "./style";
 
 export default function Logo() {
   return (
     <SCLogo>
-      <p>AnunciArt</p>
+      <SCLink to="/home">AnunciArt</SCLink>
     </SCLogo>
   );
 }

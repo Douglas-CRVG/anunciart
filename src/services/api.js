@@ -14,4 +14,8 @@ function postSignIn(body) {
   return axios.post(`${URL}/sign-in`, body);
 }
 
-export { postSignUp, postSignIn };
+function create(body, token) {
+  return axios.post(`${URL}/create`, body, createConfig(token));
+}
+
+export { postSignUp, postSignIn, create };

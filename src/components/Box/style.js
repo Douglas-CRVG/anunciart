@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const SCBox = styled.div`
@@ -5,11 +6,11 @@ const SCBox = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 40px 0;
 
   figure {
-    height: 190px;
-    width: 300px;
+    height: 180px;
+    width: 320px;
     box-shadow: 0 0 15px #323232;
     border-radius: 4px;
     transition: all 0.5s;
@@ -35,4 +36,8 @@ const SCBox = styled.div`
   }
 `;
 
-export { SCBox };
+const SCLink = styled(Link)`
+  text-decoration: none;
+`;
+
+export { SCBox, SCLink };

@@ -34,4 +34,22 @@ const signIn = [
   },
 ];
 
-export { signUp, signIn };
+const add = [
+  {
+    name: "Nome",
+    type: "text",
+    prop: "name",
+  },
+  {
+    name: "Descrição",
+    type: "text",
+    prop: "description",
+  },
+  {
+    name: "Arquivo",
+    type: "file",
+    prop: "fileName",
+  },
+];
+
+export { signUp, signIn, add };

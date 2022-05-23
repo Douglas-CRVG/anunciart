@@ -7,6 +7,7 @@ const SCCategory = styled.div`
   p {
     font-size: 32px;
     font-weight: 500;
+    margin-left: 15px;
   }
 `;
 

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const SCLogo = styled.div`
@@ -18,4 +19,13 @@ const SCLogo = styled.div`
   }
 `;
 
-export { SCLogo };
+const SCLink = styled(Link)`
+  text-decoration: none;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 45px;
+  color: rgb(229, 24, 20);
+`;
+
+export { SCLogo, SCLink };
