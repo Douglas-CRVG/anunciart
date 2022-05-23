@@ -1,12 +1,7 @@
-export default function Description() {
+export default function Description({ description }) {
   return (
     <div>
-      <h5>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat iste,
-        ullam ipsam quidem aliquam laborum quae earum sequi minus exercitationem
-        odio nihil dicta doloremque ea alias numquam iure, cupiditate
-        temporibus?
-      </h5>
+      <h5>{description}</h5>
     </div>
   );
 }

@@ -22,4 +22,8 @@ function findAll() {
   return axios.get(`${URL}/videos`);
 }
 
-export { postSignUp, postSignIn, create, findAll };
+function findByIdVideo(token, params) {
+  return axios.get(`${URL}/videos/${params}`, createConfig(token));
+}
+
+export { postSignUp, postSignIn, create, findAll, findByIdVideo };

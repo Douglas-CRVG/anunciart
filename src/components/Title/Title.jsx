@@ -1,7 +1,7 @@
-export default function Title() {
+export default function Title({ title }) {
   return (
     <div>
-      <h3>Lorem ipsum dolor sit amet, consectetur adip</h3>
+      <h3>{title}</h3>
     </div>
   );
 }
