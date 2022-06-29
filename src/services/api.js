@@ -14,8 +14,12 @@ function postSignIn(body) {
   return axios.post(`${URL}/sign-in`, body);
 }
 
+function createTEST(body, token) {
+  return axios.post(`${URL}/videos-test`, body, createConfig(token));
+}
+
 function create(body, token) {
-  return axios.post(`${URL}/create`, body, createConfig(token));
+  return axios.post(`${URL}/videos`, body, createConfig(token));
 }
 
 function findAll() {

@@ -10,10 +10,10 @@ import useAuth from "../../hooks/useToken";
 export default function Players() {
   const [video, setVideo] = useState();
   const { token } = useAuth();
-  const { idVideo } = useParams();
+  const { videoId } = useParams();
   const navigate = useNavigate();
   useEffect(() => {
-    findByIdVideo(token, idVideo)
+    findByIdVideo(token, videoId)
       .then((response) => {
         setVideo(response.data);
       })

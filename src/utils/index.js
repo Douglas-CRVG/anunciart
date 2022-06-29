@@ -48,7 +48,7 @@ const add = [
   {
     name: "Arquivo",
     type: "file",
-    prop: "fileName",
+    prop: "video",
   },
 ];
 

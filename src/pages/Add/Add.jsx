@@ -14,7 +14,6 @@ export default function Add() {
   const [bodyAdd, setBodyAdd] = useState({
     name: "",
     description: "",
-    fileName: "",
   });
   const { setBlock } = useBlock();
   const { token } = useAuth();
@@ -31,7 +30,12 @@ export default function Add() {
       return;
     }
 
-    create(bodyAdd, token)
+    const body = new FormData();
+    body.set("name", bodyAdd.name);
+    body.set("description", bodyAdd.description);
+    body.set("video", bodyAdd.video, bodyAdd.video.name);
+
+    create(body, token)
       .then((response) => {
         setBlock(false);
         redirectSignIn("/home", { replace: true });

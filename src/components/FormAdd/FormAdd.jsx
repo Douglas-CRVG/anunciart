@@ -5,12 +5,7 @@ import InputFile from "./InputFile/InputFile";
 export default function FormAdd({ inputs, button, func, data, setData }) {
   const { block } = useBlock();
   return (
-    <SCForm
-      onSubmit={func}
-      enctype="multipart/form-data"
-      method="post"
-      action="{{url('/add_a_note' )}}"
-    >
+    <SCForm onSubmit={func} method="post" enctype="multipart/form-data">
       {inputs.map((input, index) => {
         if (input.type === "text") {
           return <Input key={index} {...input} data={data} setData={setData} />;
